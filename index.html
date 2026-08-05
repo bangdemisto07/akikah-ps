@@ -3,56 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Membuka Aplikasi Akikah...</title>
+  <title>Undangan Akikah Nadhif Althafi</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    /* Mengatur iframe agar memenuhi seluruh layar tanpa scrollbar berlebih */
+    html, body {
       margin: 0;
-      background-color: #f4f6f9;
-      color: #333;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #ffffff;
     }
-    .container {
-      text-align: center;
-      padding: 30px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .loader {
-      border: 4px solid #f3f3f3;
-      border-top: 4px solid #3498db;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-      margin: 20px auto;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    a {
-      color: #3498db;
-      text-decoration: none;
-      font-weight: bold;
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
     }
   </style>
-  <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbxgYx0PgTjay_uttFYEJU7_8VyGgcd9D_a-FDzJnpKYjW7CVHGZpY1RifSF8lThYVYp/exec">
 </head>
 <body>
 
-  <div class="container">
-    <h2>Mengarahkan ke Aplikasi Akikah...</h2>
-    <div class="loader"></div>
-    <p>Mohon tunggu sebentar. Jika halaman tidak beralih otomatis, <a href="https://script.google.com/macros/s/AKfycbxgYx0PgTjay_uttFYEJU7_8VyGgcd9D_a-FDzJnpKYjW7CVHGZpY1RifSF8lThYVYp/exec">klik di sini</a>.</p>
-  </div>
+  <!-- Element iframe untuk menampilkan Web App Apps Script -->
+  <iframe id="webAppFrame" src=""></iframe>
 
   <script>
-    window.location.replace("https://script.google.com/macros/s/AKfycbxgYx0PgTjay_uttFYEJU7_8VyGgcd9D_a-FDzJnpKYjW7CVHGZpY1RifSF8lThYVYp/exec");
+    // URL dasar Google Apps Script Anda
+    const baseUrl = "https://script.google.com/macros/s/AKfycbxgYx0PgTjay_uttFYEJU7_8VyGgcd9D_a-FDzJnpKYjW7CVHGZpY1RifSF8lThYVYp/exec";
+    
+    // Mengambil parameter pencarian dari URL GitHub (misal: ?to=NamaTamu)
+    const urlParams = window.location.search;
+    
+    // Menggabungkan URL Apps Script dengan parameter tamu
+    document.getElementById("webAppFrame").src = baseUrl + urlParams;
   </script>
 
 </body>
