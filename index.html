@@ -1,13 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Membuka Aplikasi...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membuka Aplikasi Akikah...</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+    .container {
+      text-align: center;
+      padding: 30px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .loader {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+  <!-- Redirect otomatis tingkat header -->
+  <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbx73MhI4K2OqfPjSg-zG28HhF-I2-PqV3oK_LENGKAP/exec">
 </head>
 <body>
+
+  <div class="container">
+    <h2>Mengarahkan ke Aplikasi Akikah...</h2>
+    <div class="loader"></div>
+    <p>Mohon tunggu sebentar. Jika halaman tidak beralih otomatis, <a id="app-link" href="https://script.google.com/macros/s/AKfycbx73MhI4K2OqfPjSg-zG28HhF-I2-PqV3oK_LENGKAP/exec">klik di sini</a>.</p>
+  </div>
+
   <script>
-    // Ganti teks di bawah ini dengan URL utuh yang baru saja Anda copy dari Apps Script
-    window.location.href = https://script.google.com/macros/s/AKfycbxgYx0PgTjay_uttFYEJU7_8VyGgcd9D_a-FDzJnpKYjW7CVHGZpY1RifSF8lThYVYp/exec;
+    // Redirect via JavaScript
+    const targetUrl = "https://script.google.com/macros/s/AKfycbx73MhI4K2OqfPjSg-zG28HhF-I2-PqV3oK_LENGKAP/exec";
+    window.location.replace(targetUrl);
   </script>
+
 </body>
 </html>
